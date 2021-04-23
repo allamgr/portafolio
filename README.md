@@ -42,8 +42,8 @@ Since this will be my first serious repository on GitHub I do not have too much 
 
 This library was created following a two tutorials:
 
-- [Build, test and release a React component library with Storybook](Tutorial2).
-- [Build a Private React Component Library — Rollup, Material-UI & Testing Playground — Part I](Tutorial1).
+- [Build, test and release a React component library with Storybook][tutorial2].
+- [Build a Private React Component Library — Rollup, Material-UI & Testing Playground — Part I][tutorial1].
 
 ## Donate
 
@@ -53,7 +53,7 @@ I will be updating the amount donated related to this project
 
 Donations: USD 0$
 
-[Donate](PayPal)
+[Donate][paypal]
 
 [tutorial1]: https://hinammehra.medium.com/build-a-private-react-component-library-cra-rollup-material-ui-github-package-registry-1e14da93e790
 [tutorial2]: https://dev.to/denniskortsch/build-test-and-release-a-react-component-library-with-storybook-13d6
