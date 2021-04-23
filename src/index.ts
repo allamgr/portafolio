@@ -1,0 +1,1 @@
+export {PersonalInfo} from './components/PersonalInfo'
