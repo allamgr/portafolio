@@ -1,0 +1,1 @@
+export { default as PersonalInfo } from './components/PersonalInfo';
