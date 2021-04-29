@@ -7,15 +7,6 @@ export default {
   component: PersonalInfo,
   description: 'A component to display your personal info',
   argTypes: {
-    name: { control: 'string' },
-    position: {control: 'string' },
-    brief: {control: 'string' },
-    email: {control: 'string' },
-    emailDomain: {control: 'string' },
-    location: {control: 'string' },
-    phone: {control: 'string' },
-    gender: {control: 'string' },
-    github: {control: 'string' },
   }
 } as Meta;
 
@@ -25,11 +16,25 @@ export const Default = Template.bind({});
 Default.args = {
   name: 'Allam Galan Rosa',
   position: 'Full Stack Developer',
-  brief: 'I like to build custom software',
+  brief: `Experienced Software Developer with more than 8 years involved in all phases of software development - from concept to delivery. `,
   email: 'agrtest',
   emailDomain: 'gmail.com',
-  location: 'DR',
+  location: 'Dom. Rep.',
   phone: '859-555-5555',
-  gender: 'M',
-  github: 'allamgr'
+  gender: 'Male',
+  github: 'allamgr',
+  linkedin: 'allamgr',
+  twitter: 'allamgr',
+}
+
+export const Position = Template.bind({});
+Position.args = {
+  ...Default.args,
+  position: {name: 'Fullstack Developer', at:'Tesla', atLink: 'https://tesla.com'},
+}
+
+export const MultiplePosition = Template.bind({});
+MultiplePosition.args = {
+  ...Default.args,
+  position: [{name: 'Fullstack Developer', at:'Tesla', atLink: 'https://tesla.com'}, {name: 'Fullstack Developer', at:'Google', atLink: 'https://google.com'}],  
 }

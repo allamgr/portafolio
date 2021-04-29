@@ -5,6 +5,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import packageJson from './package.json';
 
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: 'src/index.ts',
