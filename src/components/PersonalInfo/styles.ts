@@ -14,6 +14,7 @@ const StyledPosition = styled.h3`
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #666;
+  font-weight: normal;
 `;
 
 

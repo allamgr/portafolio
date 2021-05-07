@@ -36,5 +36,5 @@ Position.args = {
 export const MultiplePosition = Template.bind({});
 MultiplePosition.args = {
   ...Default.args,
-  position: [{name: 'Fullstack Developer', at:'Tesla', atLink: 'https://tesla.com'}, {name: 'Fullstack Developer', at:'Google', atLink: 'https://google.com'}],  
+  position: [{name: 'Fullstack Developer', at:'Tesla', atLink: 'https://tesla.com', startDate: '2018'}, {name: 'Fullstack Developer', at:'Google', atLink: 'https://google.com', startDate: '2019'}],  
 }

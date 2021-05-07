@@ -9,7 +9,8 @@ export interface PositionProps {
   children?: any,
   name?: string,
   at?: string
-  atLink?: string
+  atLink?: string,
+  startDate?: Date | string | number,
 }
 
 export interface PersonalInfoProps {
@@ -32,11 +33,14 @@ export interface PersonalInfoBaseProps {
 
 export const Position = (props: PositionProps): JSX.Element => {
 
+  function since(): JSX.Element | null{
+    return props.startDate ? (<small> from {props.startDate} to present</small>) : null
+  }
+  
   function renderAt() {
-    let atWithLink = <a href={props.atLink} target="_blank">{props.at}</a>;
 
-    let At = (props: any): JSX.Element => {
-       return (<span> at {props.children}</span>)
+    let At = (atProps: any): JSX.Element => {
+      return (<span> at {atProps.children}</span>)
     }
 
     if (props.atLink && props.at) {
@@ -49,9 +53,9 @@ export const Position = (props: PositionProps): JSX.Element => {
 
   function renderPosition(): JSX.Element{
     if (props.children) {
-      return <>{props.children}{renderAt()}</>;
+      return <>{props.children}{renderAt()}{since()}</>;
     } else if (props.name) {
-      return <>{props.name}{renderAt()}</>;
+      return <>{props.name}{renderAt()}{since()}</>;
     } else {
       return <span>Position requires a children or name prop</span>
     }
