@@ -1,1 +1,1 @@
-export {PersonalInfo} from './components/PersonalInfo'
+export { PersonalInfo } from './components/PersonalInfo'
