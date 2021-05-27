@@ -1,0 +1,1 @@
+export {EducationInfo} from "./EducationInfo"
