@@ -7,7 +7,7 @@ export const List = styled.ul`
   display: block;
 `;
 
-export const SchoolLogo = styled.img`
+export const CompanyLogo = styled.img`
   width:100%;
   height:100%;
   max-height:100%;
@@ -27,7 +27,7 @@ export const LogoContainer = styled.div`
   overflow: hidden;
 `
 
-export const EducationDetail = styled(Box)`
+export const CompanyDetail = styled(Box)`
   min-height: 60px;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -51,3 +51,9 @@ export const PlainLink = styled.a`
     text-decoration: underline;
   }
 `
+
+export const Description = styled.p`
+  line-height: 1.2rem;
+  color: #000000;
+  font-size: 0.8rem;
+  `

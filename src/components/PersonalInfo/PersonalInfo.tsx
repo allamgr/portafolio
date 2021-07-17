@@ -34,7 +34,7 @@ export interface PersonalInfoBaseProps {
 export const Position = (props: PositionProps): JSX.Element => {
 
   function since(): JSX.Element | null{
-    return props.startDate ? (<small> {props.startDate} - present</small>) : null
+    return props.startDate ? (<small> [{props.startDate} - present]</small>) : null
   }
   
   function renderAt() {
