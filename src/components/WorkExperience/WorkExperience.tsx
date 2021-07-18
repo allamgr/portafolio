@@ -72,7 +72,7 @@ export const WorkExperience = (props: WorkExperienceProps): JSX.Element => {
   return (
     <div>
       <h2>💼 Work Experience</h2>
-    <List>
+      <List>
       {
         props.data.map((e, i) => {
           return <Work key={i} {...e}/>

@@ -90,7 +90,7 @@ export const PersonalInfo = (props: PersonalInfoProps): JSX.Element => {
         }
         {props.brief && <Brief>{props.brief}</Brief>}
       </div>
-      <Flex flexWrap={['wrap', 'nowrap', 'nowrap']}>
+      <Flex flexWrap={['wrap', 'wrap', 'wrap']}>
           { props.email && props.emailDomain &&  (<Info><FontAwesomeIcon icon={faEnvelope}/> <a href={`mailto:${props.email}@${props.emailDomain}`}>{props.email}<span>@</span>{props.emailDomain}</a></Info>)}
           { props.location && <Info><FontAwesomeIcon icon={faMapMarkedAlt}/> {props.location}</Info> }
           { props.phone && <Info><FontAwesomeIcon icon={faPhone} /> <a href={`tel:${props.phone}`}>{props.phone}</a></Info>}

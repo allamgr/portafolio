@@ -18,6 +18,6 @@
     "declaration": true,
     "outDir": "./lib"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/@types/assets/index.d.ts"],
   "exclude": ["node_modules", "lib"]
 }
