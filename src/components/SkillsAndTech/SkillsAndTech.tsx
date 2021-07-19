@@ -1,72 +1,70 @@
-import { Box, Flex } from "reflexbox"
-import { CSharpIcon, CSSIcon, JSIcon, LaravelIcon, MySqlIcon, NodejsIcon, PhpIcon, ReactIcon, SqlIcon, TSIcon } from "../../assests/icons";
+import { Box, Flex } from "reflexbox";
+import styled from "styled-components";
+import { tidy } from "../../shared/utils";
+import { TechItem, TechItemContainer, TechLabel, TechLevel, TechLevelBadge, TechLevelContainer, TechLevelDesc } from "./styles";
+import { TechIcon, techIconExists } from "./TechIcon";
+
+type TECH_LEVEL = { label: string, key:string, color:string}
+
+const BASIC_LEVEL : TECH_LEVEL = { label: 'Basic', key: 'b', color: '#959595' };
+const INTERMEDIATE_LEVEL : TECH_LEVEL = { label: 'Intermediate', key: 'i', color: '#007fd9' };
+const ADVANCED_LEVEL : TECH_LEVEL = { label: 'Advanced', key: 'a', color: '#1acd2d' };
 
 export interface TechProps {
   name: string,
-  level: 'Basic' | 'Intermediate' | 'Advanced' | 'B' | 'I' | 'A',
+  level: 'basic' | 'intermediate' | 'advanced' | 'B' | 'I' | 'A' | 'b' | 'i' | 'a',
   years?: number,
   logo?: SVGAElement
 }
 
+const TechLevelDictionary : { [name: string]: TECH_LEVEL } = {
+  'basic': BASIC_LEVEL,
+  'b': BASIC_LEVEL,
+  'advanced': ADVANCED_LEVEL,
+  'a': ADVANCED_LEVEL,
+  'intermediate': INTERMEDIATE_LEVEL,
+  'i': INTERMEDIATE_LEVEL,
+}
 export interface SkillsAndTechProps {
   technologies: TechProps[]
 }
 
-const tidy = (string: string) => string.toLowerCase().trim();
-
-
-const getIcon = (name: string) => {
-  switch (tidy(name)) {
-    case "react":
-      return <ReactIcon />;
-    case "php":
-      return <PhpIcon />;
-    case "javascript":
-      return <JSIcon />;
-    case "js":
-      return <JSIcon />;
-    case "csharp":
-      return <CSharpIcon />;
-    case "c#":
-      return <CSharpIcon />;
-    case "css":
-      return <CSSIcon />;
-    case "nodejs":
-      return <NodejsIcon />;
-    case "node.js":
-      return <NodejsIcon />;
-    case "typescript":
-      return <TSIcon />;
-    case "ts":
-      return <TSIcon />;
-    case "mysql":
-      return <MySqlIcon />;
-    case "sql":
-      return <SqlIcon />;
-    case "laravel":
-      return <LaravelIcon />;
-    default:
-      return "";
+const getTechLevelByLevel = (level: string) : TECH_LEVEL | undefined => {
+  let levelKey = tidy(level);
+  if (TechLevelDictionary.hasOwnProperty(levelKey)) {
+    return TechLevelDictionary[levelKey];
   }
-};
+  return undefined;
+}
 
-const TechIcon = (props: any): JSX.Element | null => {
-  return (
-    <Flex justifyContent={'center'} alignItems={'center'} style={{width: '50px', height: '50px'}} >{getIcon(props.name)}</Flex>
-  )
+const TechLevelLabel = (props: any): JSX.Element => {
+  let techLevel = getTechLevelByLevel(props.level);
+  if (techLevel) {
+    return <TechLevelBadge style={{ backgroundColor: techLevel.color, ...(props.style ? props.style : null) }}>{techLevel.key.toUpperCase()}</TechLevelBadge>
+  }
+  return <TechLevelBadge>-</TechLevelBadge>
 }
 
 export const SkillsAndTech = (props: SkillsAndTechProps): JSX.Element => {
   return (<div>
     <h2>🚀 Skills and Technologies</h2>
-
+    <TechLevelContainer flexWrap={'wrap'}>
+      <TechLevel><TechLevelLabel level={'a'}/><TechLevelDesc>Advanced</TechLevelDesc></TechLevel>
+      <TechLevel><TechLevelLabel level={'i'}/><TechLevelDesc>Intermediate</TechLevelDesc></TechLevel>
+      <TechLevel><TechLevelLabel level={'b'}/><TechLevelDesc>Basic</TechLevelDesc></TechLevel>
+    </TechLevelContainer>
     <Flex flexWrap={'wrap'}>
       {
         props.technologies.map((t, i) => {
-          return <Box style={{ border: '1px solid #ddd', padding:'5px', borderRadius:'4px', marginRight: '10px', marginBottom: '10px' }} display={'flex'} alignItems='center' justifyContent='center' flexDirection='column'>
-            <TechIcon name={t.name}/>
-            <span style={{color: '#00000099', fontSize: '0.8rem', marginTop: '10px'}}>{t.name}</span>
-          </Box>
+          let techLevel = getTechLevelByLevel(t.level);
+          let title = `${t.name}${(techLevel ? ` (${techLevel.label})` : '')}`
+
+          return <TechItemContainer key={i} title={title}>
+            <TechItem>
+              {techIconExists(t.name) ? <TechIcon name={t.name} svgStyle={{ width: '50px', height: '50px' }} /> : <TechLabel>{t.name}</TechLabel> }
+            </TechItem>
+            <TechLevelLabel level={t.level} style={{position: 'absolute',zIdex:2, top: '-7.5px', right:'-7.5px', marginRight:0}}/>
+          </TechItemContainer>
         })
       }
     </Flex>

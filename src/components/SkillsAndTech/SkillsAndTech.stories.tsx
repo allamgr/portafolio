@@ -15,31 +15,31 @@ Default.args = {
   technologies: [
     {
       name: 'C#',
-      level: 'Advanced'
+      level: 'advanced'
     },
     {
       name: 'Javascript',
-      level: 'Advanced'
+      level: 'advanced'
     },
     {
       name: 'CSS',
-      level: 'Advanced'
+      level: 'advanced'
     },
     {
       name: 'PHP',
-      level: 'Advanced'
+      level: 'advanced'
     },
     {
       name: 'React',
-      level: 'Advanced'
+      level: 'advanced'
     },
     {
       name: 'Node.js',
-      level: 'Advanced'
+      level: 'advanced'
     },
     {
       name: 'SQL',
-      level: 'Intermediate'
+      level: 'intermediate'
     },
     {
       name: 'MySQL',

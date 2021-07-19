@@ -1,4 +1,4 @@
-import { ReactComponent as ReactIcon } from './devicons/react/react-original.svg';
+import { ReactComponent as ReactIcon } from './devicons/react/react-original-wordmark.svg';
 import { ReactComponent as PhpIcon } from './devicons/php/php-original.svg';
 import { ReactComponent as CSharpIcon } from './devicons/csharp/csharp-original.svg';
 import { ReactComponent as JSIcon } from './devicons/javascript/javascript-original.svg';
