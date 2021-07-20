@@ -1,8 +1,9 @@
+import React from 'react';
 import { Box, Flex } from "reflexbox";
 import styled from "styled-components";
 import { tidy } from "../../shared/utils";
 import { TechItem, TechItemContainer, TechLabel, TechLevel, TechLevelBadge, TechLevelContainer, TechLevelDesc } from "./styles";
-import { TechIcon, techIconExists } from "./TechIcon";
+import { TechIcon } from "../shared/TechIcon";
 
 type TECH_LEVEL = { label: string, key:string, color:string}
 
@@ -61,7 +62,7 @@ export const SkillsAndTech = (props: SkillsAndTechProps): JSX.Element => {
 
           return <TechItemContainer key={i} title={title}>
             <TechItem>
-              {techIconExists(t.name) ? <TechIcon name={t.name} svgStyle={{ width: '50px', height: '50px' }} /> : <TechLabel>{t.name}</TechLabel> }
+              <TechIcon name={t.name} svgStyle={{ width: '50px', height: '50px' }} notFound={true} placeholder={<TechLabel>{t.name}</TechLabel> } />
             </TechItem>
             <TechLevelLabel level={t.level} style={{position: 'absolute',zIdex:2, top: '-7.5px', right:'-7.5px', marginRight:0}}/>
           </TechItemContainer>
