@@ -1,5 +1,11 @@
 # @allamgr/portafolio
 
+## 0.2.1
+
+### Patch Changes
+
+- 1f0d18f: Adding missing icon of vagrant
+
 ## 0.2.0
 
 ### Minor Changes
