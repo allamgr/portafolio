@@ -9,5 +9,22 @@
     "gender": "Male",
     "github": "allamgr",
     "location": "Santo Domingo, Dom. Rep."
-  }
+  },
+  "education": [
+    { 
+      "school": { 
+        "name": "Universidad Iberoamericana" 
+      }, 
+      "degree": "Information Technology Engineer", 
+      "startYear": 2013 
+    }, 
+    { 
+      "school": { 
+        "name": "Instituto Tecnológico de las Américas"
+      }, 
+      "degree": "Software Developer Technologist", 
+      "startYear": 2010, 
+      "endYear": 2012 
+    }
+  ]
 }
