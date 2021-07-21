@@ -4,9 +4,14 @@ import cleaner from 'rollup-plugin-cleaner';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import postcss from "rollup-plugin-postcss";
+import {terser} from 'rollup-plugin-terser';
 import packageJson from './package.json';
 
-const svgr =  require('@svgr/rollup').default
+const svgr = require('@svgr/rollup').default
+
+const isProductionBuild = process.env.BUILD === 'production';
+
+console.info('isProduction', isProductionBuild);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -15,23 +20,24 @@ export default {
     {
       file: packageJson.main,
       format: 'cjs',
-      sourcemap: true,
+      sourcemap: (isProductionBuild ? false : true)
     },
     {
       file: packageJson.module,
       format: 'esm',
-      sourcemap: true,
+      sourcemap: (isProductionBuild ? false : true)
     },
   ],
   plugins: [
     cleaner({
-      targets: ['./lib'],
+      targets: ['./dist'],
     }),
     peerDepsExternal(),
     resolve(),
     commonjs(),
     typescript({exclude: ['**/*.stories.tsx', '**/*.test.tsx'], useTsconfigDeclarationDir: true }),
     postcss(),
-    svgr({ native: true })
+    svgr(),
+    (isProductionBuild && terser())
   ],
 };
