@@ -1,6 +1,6 @@
 {
   "name": "@allamgr/portafolio",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "allamgr",
   "private": false,
   "license": "MIT",
@@ -27,7 +27,6 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-   
     "prop-types": "^15.7.2",
     "web-vitals": "^1.0.1"
   },
