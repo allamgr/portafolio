@@ -27,10 +27,6 @@ export interface PersonalInfoProps {
   twitter?: string;
 }
 
-export interface PersonalInfoBaseProps {
-  data?: PersonalInfoProps,
-}
-
 export const Position = (props: PositionProps): JSX.Element => {
 
   function since(): JSX.Element | null{

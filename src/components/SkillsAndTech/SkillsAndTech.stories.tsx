@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { SkillsAndTech, SkillsAndTechProps } from './SkillsAndTech'
 
 export default {
-  title: 'SkillsAndTech',
+  title: 'Components/SkillsAndTech',
   component: SkillsAndTech,
   description: 'A component to display your skills and knowed technologies',
   

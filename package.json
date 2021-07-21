@@ -1,7 +1,7 @@
 {
   "name": "@allamgr/portafolio",
   "version": "0.2.1",
-  "author": "Allam Galan Rosa",
+  "author": "allamgr",
   "private": false,
   "license": "MIT",
   "publishConfig": {
@@ -19,23 +19,20 @@
     "cv",
     "resume"
   ],
-  "main": "dist/index.cjs.js",
+  "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "source": "src/index.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.1.10",
+   
     "prop-types": "^15.7.2",
     "web-vitals": "^1.0.1"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "start": "react-scripts start",
@@ -139,6 +136,9 @@
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "styled-components": "^5.2.3",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.1.10",
     "ts-jest": "^26.5.5",
     "typescript": "^4.2.4"
   },

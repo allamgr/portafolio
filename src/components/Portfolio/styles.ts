@@ -50,11 +50,9 @@ const ProjectStackContainer = styled(Flex)`
 `
 
 const ProjectStack = styled(Flex)`
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 5px;
-  margin-right: 7px;
-  margin-bottom: 7px;
+  border-radius: 3px;  
+  margin-right: 10px!important;
+  margin-bottom: 10px!important;
   font-size: 0.8rem;
   font-weight: 700;
 `

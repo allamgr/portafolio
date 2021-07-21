@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { EducationInfo, EducationInfoProps } from './EducationInfo'
 
 export default {
-  title: 'EducationInfo',
+  title: 'Components/EducationInfo',
   component: EducationInfo,
   description: 'A component to display your education info',
   argTypes: {

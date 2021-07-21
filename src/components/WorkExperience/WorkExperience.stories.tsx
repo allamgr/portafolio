@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { WorkExperience, WorkExperienceProps } from './WorkExperience'
 
 export default {
-  title: 'WorkExperience',
+  title: 'Components/WorkExperience',
   component: WorkExperience,
   description: 'A component to display your work experience',
   argTypes: {
