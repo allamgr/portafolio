@@ -4,7 +4,7 @@ import TemplateLean from './TemplateLean';
 
 describe('TemplateLean', () => {
   test('renders a default TemplateLean with PersonalInfo', async () => {
-    render(<TemplateLean personalInfo={{}} />);
+    render(<TemplateLean data={{}} />);
 
     expect(screen.getByText('Allam Galan Rosa')).toBeInTheDocument();
 
