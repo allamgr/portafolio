@@ -1,5 +1,11 @@
 # @allamgr/portafolio
 
+## 0.3.0
+
+### Minor Changes
+
+- f8cbba4: Adding templates component
+
 ## 0.2.1
 
 ### Patch Changes
