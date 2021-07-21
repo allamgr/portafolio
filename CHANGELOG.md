@@ -1,5 +1,11 @@
 # @allamgr/portafolio
 
+## 0.3.1
+
+### Patch Changes
+
+- 14f6dac: Opitimze build files and fix error with svg requesting react-native
+
 ## 0.3.0
 
 ### Minor Changes
