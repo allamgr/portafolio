@@ -56,7 +56,7 @@ export const SkillsAndTech = (props: SkillsAndTechProps): JSX.Element => {
     </TechLevelContainer>
     <Flex flexWrap={'wrap'}>
       {
-        props.technologies.map((t, i) => {
+        props.technologies && props.technologies.map((t, i) => {
           let techLevel = getTechLevelByLevel(t.level);
           let title = `${t.name}${(techLevel ? ` (${techLevel.label})` : '')}`
 

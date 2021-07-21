@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Portfolio, PortfolioProps } from './Porfolio'
 
 export default {
-  title: 'Portfolio',
+  title: 'Components/Portfolio',
   component: Portfolio,
   description: 'A component to display your skills and knowed technologies',
   

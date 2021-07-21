@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { PersonalInfo, PersonalInfoProps } from './PersonalInfo'
 
 export default {
-  title: 'PersonalInfo',
+  title: 'Components/PersonalInfo',
   component: PersonalInfo,
   description: 'A component to display your personal info',
   argTypes: {

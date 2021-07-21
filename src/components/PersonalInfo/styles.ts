@@ -24,8 +24,6 @@ const Brief = styled.p`
 `;
 
 const Info = styled(Box)`
-  padding: 0.5rem;
-  border: 1px solid #ddd;
   border-radius: 0.5rem;
   margin-right: 1rem;
   margin-bottom: 1rem;

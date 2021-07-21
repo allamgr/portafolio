@@ -2,7 +2,7 @@ import { Box, Flex } from 'reflexbox';
 import styled from 'styled-components';
 
 const TechLevelContainer = styled(Flex)`
-  margin-bottom: 10px
+  margin-bottom: 20px!important;
 `;
 
 const TechLevel = styled(Flex)`
@@ -33,6 +33,7 @@ const TechLevelDesc = styled.span`
   align-items: center;
   font-size: 0.9rem;
   color: #00000099;
+  margin-right: 10px;
 `;
 
 const TechLabel = styled.span`
@@ -41,11 +42,10 @@ const TechLabel = styled.span`
 `
 
 const TechItemContainer = styled(Box)`
-  border: 1px solid #ddd;
   padding: 5px;
   border-radius: 4px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  margin-right: 15px!important;
+  margin-bottom: 10px!important;
   position:relative;
   display: flex;
   flex-direction: column;

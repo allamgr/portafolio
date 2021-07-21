@@ -22,7 +22,7 @@ export interface ProjectProps {
 }
 
 export interface PortfolioProps {
-  projects: ProjectProps[]
+  projects: Array<ProjectProps>
 }
 
 export const Portfolio = (props: PortfolioProps): JSX.Element => {
@@ -30,7 +30,7 @@ export const Portfolio = (props: PortfolioProps): JSX.Element => {
     <h2>💻 Portfolio</h2>
     <div>
       {
-        props.projects.map((p, i) => {
+        props.projects && props.projects.map((p, i) => {
           let title = `${p.name}`
           let duration = `${p.startYear}${p.endYear ? ' - ' : ''}${p.endYear === 'present' ? `Present` : (p.endYear ? p.endYear : '')}`
           let projectPreview = `${FALLBACK_LOGO_URL}${p.name}`;

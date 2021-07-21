@@ -62,9 +62,9 @@ export const EducationInfo = (props: EducationInfoProps): JSX.Element => {
   return (
     <div>
       <h2>🎓 Education</h2>
-    <List>
+      <List>
       {
-        props.data.map((e, i) => {
+        props.data && props.data.map((e, i) => {
           return <Education key={i} {...e}/>
         })
       }
