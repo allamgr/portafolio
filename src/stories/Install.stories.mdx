@@ -1,0 +1,103 @@
+import { Meta } from "@storybook/addon-docs"
+import LinkTo from "@storybook/addon-links/react"
+
+<Meta title="Get Started/Install" />
+
+<style>{`
+  .subheading {
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .nextbox{
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 5%) 0px 5px 10px 0px;
+    border-radius: 5px;
+    padding: 20px;
+    
+  }
+  .nextbox--story{
+    font-weight: 700;
+  }
+  .nextbox--desc{
+    font-size: 0.9rem;
+    color: #585858;
+    line-height: 1.2rem;
+  }
+  .nextbox--inner{
+    margin-bottom: 20px;
+  }
+  .nextbox--button a, .btn-link{
+    padding: 10px;
+    background: #1ea7fd;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+  }
+`}</style>
+
+# Install portafolio
+
+portafolio v0.3 requires **React 17.0.2 or later.**
+
+To use portafolio with your React app, install it as a dependency:
+
+```sh
+# If you use npm:
+npm install --save @allamgr/portafolio
+
+# Or if you use Yarn:
+yarn add @allamgr/portafolio
+```
+
+## How to use
+
+```js
+# App.js
+import { TemplateLean } from '@allamgr/portafolio'
+import jsonData from './cv.json';
+
+function App() {
+  return (
+    <div>
+      <TemplateLean json={json}/>
+    </div>
+  );
+}
+
+export default App;
+```
+
+<details>
+
+<summary>
+  <strong>portafolio</strong> is not made for empty projects
+</summary>
+
+**portafolio** needs to be installed into a project that is already setup with React. It will not work on an empty project. You can bootstrap an app with React:
+
+- 📦 [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
+
+</details>
+
+<div className="subheading">Next</div>
+
+<div className="nextbox">
+  <div className="nextbox--inner">
+    <div className="nextbox--story">Templates</div>
+    <div className="nextbox--desc">
+      Choose one of the default templates or create yours
+    </div>
+  </div>
+  <div className="nextbox--button">
+    <LinkTo kind={"Get Started/Templates"} story="page">
+      Continue
+    </LinkTo>
+  </div>
+</div>
