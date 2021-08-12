@@ -1,30 +1,18 @@
 # portafolio
 
+Build your personal portolio website faster.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eee2971b-65fb-494c-b956-6391682f1bc4/deploy-status)](https://app.netlify.com/sites/allamgr-portafolio/deploys)
+
 ## Why I created this?
 
 As developers we don't like to spend too much time creating a CV, this was my case and I decide to make a reusable and extensible library in react (thinking to replicate this in VueJs) with the purpose of use it in my own CV. You would say, "But you will spend more time doing this library than your own Resume" and yeah maybe you're 110% right, but I want to save other people time.
 
 portafolio is a react library that can be used to build your Resume/CV very fast with only a JSON file with the required information by the library.
 
-## Install
+## Documentation
 
-Using npm:
-
-```sh
-npm install --save @allamgr/portafolio
-```
-
-or using yarn:
-
-```sh
-yarn add @allamgr/portafolio
-```
-
-## How to use
-
-```sh
-import { PersonalInfo } from '@allamgr/portafolio'
-```
+Documentation can be found [portafolio's docs site][docs].
 
 ## Templates
 
@@ -49,12 +37,9 @@ This library was created following a two tutorials:
 
 Also you can make donations with PayPal, hopefully I can build a great Full Stack PC with your donations, with Full Stack I mean that can be use for Development, Stream and why not to play some good games.
 
-I will be updating the amount donated related to this project
-
-Donations: USD 0$
-
 [Donate][paypal]
 
 [tutorial1]: https://hinammehra.medium.com/build-a-private-react-component-library-cra-rollup-material-ui-github-package-registry-1e14da93e790
 [tutorial2]: https://dev.to/denniskortsch/build-test-and-release-a-react-component-library-with-storybook-13d6
 [paypal]: https://www.paypal.com/donate?hosted_button_id=6L2N6Z8PA686E
+[docs]: https://allamgr-portafolio.netlify.app/
