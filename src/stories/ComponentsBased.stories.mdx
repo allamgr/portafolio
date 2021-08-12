@@ -1,0 +1,88 @@
+import { Meta } from "@storybook/addon-docs"
+import LinkTo from "@storybook/addon-links/react"
+
+<Meta title="Get Started/Components Based" />
+
+<style>{`
+  .subheading {
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .nextbox{
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 5%) 0px 5px 10px 0px;
+    border-radius: 5px;
+    padding: 20px;
+    
+  }
+  .nextbox--story{
+    font-weight: 700;
+  }
+  .nextbox--desc{
+    font-size: 0.9rem;
+    color: #585858;
+    line-height: 1.2rem;
+  }
+  .nextbox--inner{
+    margin-bottom: 20px;
+  }
+  .nextbox--button a, .btn-link{
+    padding: 10px;
+    background: #1ea7fd;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+  }
+`}</style>
+
+# Components Based
+
+For those ones who already have a template and just want to use any component separated, you can just import that into your project without any problem.
+
+```js
+# App.js
+import { PersonalInfo  } from '@allamgr/portafolio'
+
+function App() {
+  let personalInfoData = {
+    name: 'Allam Galan Rosa',
+    position: 'Full Stack Developer',
+    brief: `Experienced Software Developer with more than 8 years. `,
+    email: 'agrtest',
+    emailDomain: 'gmail.com',
+    location: 'Dom. Rep.',
+    phone: '859-555-5555',
+    gender: 'Male',
+    github: 'mygithub',
+    linkedin: 'mylinkedin',
+    twitter: 'mytwitter',
+  }
+  return (
+    <div>
+      <PersonalInfo {...personalInfoData}/>
+    </div>
+  );
+}
+
+export default App;
+```
+
+<div className="nextbox">
+  <div className="nextbox--inner">
+    <div className="nextbox--story">Conclusion</div>
+    <div className="nextbox--desc">Final step</div>
+  </div>
+  <div className="nextbox--button">
+    <LinkTo kind={"Get Started/Conclusion"} story="page">
+      Continue
+    </LinkTo>
+  </div>
+</div>

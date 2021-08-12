@@ -1,0 +1,118 @@
+import { Meta } from "@storybook/addon-docs"
+import LinkTo from "@storybook/addon-links/react"
+
+<Meta title="Get Started/Templates" />
+
+<style>{`
+  .subheading {
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .nextbox{
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 5%) 0px 5px 10px 0px;
+    border-radius: 5px;
+    padding: 20px;
+    
+  }
+  .nextbox--story{
+    font-weight: 700;
+  }
+  .nextbox--desc{
+    font-size: 0.9rem;
+    color: #585858;
+    line-height: 1.2rem;
+  }
+  .nextbox--inner{
+    margin-bottom: 20px;
+  }
+  .nextbox--button a, .btn-link{
+    padding: 10px;
+    background: #1ea7fd;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+  }
+`}</style>
+
+# Templates
+
+If you want to save more time, **portafolio** has default **templates** predesigned with all possible components, and the information is displayed dynamically.
+
+## How to use
+
+```js
+# App.js
+import { TemplateLean } from '@allamgr/portafolio'
+import jsonData from './cv.json';
+
+function App() {
+  return (
+    <div>
+      <TemplateLean json={json}/>
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Default Templates
+
+Go to the Templates section to see all templates available.
+
+<LinkTo kind={"Templates/Default templates"} story="page" className="btn-link">
+  See Default Templates
+</LinkTo>
+
+## Design custom templates
+
+You can design your own templates and include only the components you need on your portfolio.
+
+```js
+import React from "react"
+import {
+  PersonalInfo,
+  WorkExperience,
+  SkillsAndTech,
+  EducationInfo,
+} from "@allamgr/portafolio"
+
+export const MyCustomTemplate = (props) => {
+  return (
+    <div className="custom-template">
+      <PersonalInfo {...props.personalInfo} />
+      <SkillsAndTech {...props.skillsAndTech} />
+      {props.workExperience && <WorkExperience {...props.workExperience} />}
+      {props.educationInfo && <EducationInfo {...props.educationInfo} />}
+    </div>
+  )
+}
+
+export default MyCustomTemplate
+```
+
+**Note:** you can collaborate and create a pull request with your template, I will evaluate if can be added to the library as a default template.
+
+<div className="nextbox">
+  <div className="nextbox--inner">
+    <div className="nextbox--story">Components Based</div>
+    <div className="nextbox--desc">
+      If you don't want to use default templates, use only the components you
+      need.
+    </div>
+  </div>
+  <div className="nextbox--button">
+    <LinkTo kind={"Get Started/Components Based"} story="page">
+      Continue
+    </LinkTo>
+  </div>
+</div>

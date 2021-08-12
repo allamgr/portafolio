@@ -10,12 +10,12 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     // "@storybook/preset-create-react-app",
-    // { TODO: use DocsPage
-    //   name: '@storybook/addon-docs',
-    //   options: {
-    //     configureJSX: true,
-    //   },
-    // },
+    { 
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+      },
+    },
     // "@storybook/addon-postcss",
   ],
   babel: async (options) => {

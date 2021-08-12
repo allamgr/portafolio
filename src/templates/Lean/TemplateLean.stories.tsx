@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import TemplateLean, { TemplateProps } from './TemplateLean';
+import jsonData from './cv.json';
 
 export default {
   title: 'Templates/TemplateLean',
@@ -162,4 +163,9 @@ Create and implement the new functionalities in the rest api. Implement the desi
 
     ]}
   }
+}
+
+export const Json = Template.bind({});
+Json.args = {
+  json: JSON.stringify(jsonData),
 }
