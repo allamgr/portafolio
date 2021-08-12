@@ -1,5 +1,11 @@
 # @allamgr/portafolio
 
+## 0.3.2
+
+### Patch Changes
+
+- cd2c52c: Adding documentation
+
 ## 0.3.1
 
 ### Patch Changes
