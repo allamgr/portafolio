@@ -9,6 +9,7 @@ import { SkillsAndTech } from '../../components/SkillsAndTech';
 import { SkillsAndTechProps } from '../../components/SkillsAndTech/SkillsAndTech';
 import { Portfolio } from '../../components/Portfolio';
 import { PortfolioProps } from '../../components/Portfolio/Porfolio';
+import { Aside, Main } from './styles';
 
 export interface AllInfoProps {
   personalInfo?: PersonalInfoProps,
@@ -30,10 +31,10 @@ export const Template = (props: any): JSX.Element => {
 export const TemplateLean = (props: TemplateProps): JSX.Element => {
 
   let data: AllInfoProps = {
-
   };
   
   if (props.json) {
+    console.log(props.json);
     let _json = JSON.parse(props.json) as AllInfoProps;
     data = _json;
   } else if(props.data) {
@@ -48,15 +49,15 @@ export const TemplateLean = (props: TemplateProps): JSX.Element => {
         <PersonalInfo {...data.personalInfo} />
       </div>
       <Flex flexWrap={['wrap', 'nowrap', 'nowrap']} style={{marginBottom: '30px'}}>
-        <Box flex={[null,2,2]}>
+        <Main flex={[null,2,2]}>
           <div style={{marginBottom: '50px'}}>
             <SkillsAndTech  {...data.skillsAndTech as SkillsAndTechProps} />
           </div>
           {data.workExperience && <WorkExperience {...data.workExperience} />}
-        </Box>
-        <Flex flex={1} flexDirection={'column'}>
+        </Main>
+        <Aside flex={1} flexDirection={'column'}>
           {data.educationInfo && <EducationInfo {...data.educationInfo} />}
-        </Flex>
+        </Aside>
       </Flex>
       {data.portfolio && <Portfolio {...data.portfolio} />}
       

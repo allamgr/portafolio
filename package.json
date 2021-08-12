@@ -1,6 +1,6 @@
 {
   "name": "@allamgr/portafolio",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "author": "allamgr",
   "private": false,
   "license": "MIT",
@@ -36,13 +36,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "build-dev": "rollup -c --environment INCLUDE_DEPS,BUILD:development",
     "build-watch": "rollup -c -w",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:conflicts": "eslint-config-prettier eslint.config.js",
-    "release": "yarn build && changeset publish"
+    "release": "yarn build && changeset publish",
+    "build-static-webapp": "expo build:web"
   },
   "eslintConfig": {
     "extends": [
@@ -103,8 +105,9 @@
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.2.1",
     "@storybook/addon-actions": "^6.3.4",
+    "@storybook/addon-docs": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
+    "@storybook/addon-links": "^6.3.7",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.4",

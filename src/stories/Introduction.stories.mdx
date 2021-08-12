@@ -1,0 +1,95 @@
+import { Meta } from "@storybook/addon-docs"
+import LinkTo from "@storybook/addon-links/react"
+import CvExample from "./assets/cv-example1.png"
+
+<Meta title="Get Started/Introduction" />
+
+<style>{`
+  .subheading {
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .nextbox{
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 5%) 0px 5px 10px 0px;
+    border-radius: 5px;
+    padding: 20px;
+    
+  }
+  .nextbox--story{
+    font-weight: 700;
+  }
+  .nextbox--desc{
+    font-size: 0.9rem;
+    color: #585858;
+    line-height: 1.2rem;
+  }
+  .nextbox--inner{
+    margin-bottom: 20px;
+  }
+  .nextbox--button a, .btn-link{
+    padding: 10px;
+    background: #1ea7fd;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+  }
+`}</style>
+
+# Introduction to portafolio
+
+**portafolio** is a react library that can be used to build your Resume/CV/Portfolio very fast with only a <code>JSON</code> file with the required structure by the library or just passing an <code>Object</code> in the component <code>props</code>.
+
+**portafolio** helps you build your **personal portfolio website** using default templates or using the components individually depending on your needs.
+As developers we don't like to spend too much time creating or updating our personal porftolio, this was my case and I decide to make a reusable and extensible library in React with the purpose of use it in my own porfolio website, and why not for all developers/designers out there.
+
+[Go to repo][repo]
+
+<br />
+
+<img src={CvExample} />
+
+<br />
+<br />
+<br />
+
+## ❤️ Collaborate with me
+
+If you found this library usefull you can make donations with PayPal of any amount you want, hopefully wth your donations I can:
+
+- Build a great Full Stack PC 🖥️ with your donations (for Development, Stream and why not to play some good games).
+- Buy some 🍔 Chimis (Hamburgers), 🍕 Pizza or 🌮 Tacos.
+
+[Donate][paypal]
+
+<br />
+
+### 💡 Inspiration
+
+As you can see on the image above my insparation for the first Template was based on [LinkedIn][linkedin] profiles and [FullStack Lab][fullstacklabs] profile page.
+
+<div className="subheading">Next</div>
+
+<div className="nextbox">
+  <div className="nextbox--inner">
+    <div className="nextbox--story">Install</div>
+    <div className="nextbox--desc">Install portfolio in your project</div>
+  </div>
+  <div className="nextbox--button">
+    <LinkTo kind={"Get Started/Install"} story="page">
+      Continue
+    </LinkTo>
+  </div>
+</div>
+
+[paypal]: https://www.paypal.com/donate?hosted_button_id=6L2N6Z8PA686E
+[fullstacklabs]: https://www.fullstacklabs.co/team/stefano-santos
+[linkedin]: https://www.fullstacklabs.co/
+[repo]: https://github.com/allamgr/portafolio
