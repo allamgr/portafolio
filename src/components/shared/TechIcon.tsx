@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
 import { tidy } from "../../shared/utils";
-import { CSharpIcon, CSSIcon, JSIcon, LaravelIcon, MySqlIcon, NodejsIcon, PhpIcon, ReactIcon, ReduxIcon, RubyIcon, SassIcon, SqlIcon, SshIcon, StylusIcon, TSIcon, VagrantIcon } from "../../assests/icons";
+import { CSharpIcon, CSSIcon, DockerIcon, HtmlIcon, JavaIcon, JSIcon, KubernetesIcon, LaravelIcon, MangentoIcon, MySqlIcon, NodejsIcon, PhpIcon, ReactIcon, ReduxIcon, RubyIcon, SassIcon, SqlIcon, SshIcon, StylusIcon, TSIcon, VagrantIcon } from "../../assests/icons";
 
 export const TechIcon = (props: { name: string, svgStyle?: CSSProperties, notFound?: boolean, placeholder?: React.ReactNode }): any => {
 
@@ -27,8 +27,15 @@ export const TechIcon = (props: { name: string, svgStyle?: CSSProperties, notFou
     case "sass": return <SassIcon style={props.svgStyle} />
     case "scss": return <SassIcon style={props.svgStyle} />
     case "ssh": return <SshIcon style={props.svgStyle} />
-    case "laravel": return <LaravelIcon style={props.svgStyle} />      
-    case "vagrant": return <VagrantIcon style={props.svgStyle} />      
+    case "laravel": return <LaravelIcon style={props.svgStyle} />
+    case "vagrant": return <VagrantIcon style={props.svgStyle} />
+    case "linux": return <VagrantIcon style={props.svgStyle} />
+    case "docker": return <DockerIcon style={props.svgStyle} />
+    case "java": return <JavaIcon style={props.svgStyle} />
+    case "kubernetes": return <KubernetesIcon style={props.svgStyle} />
+    case "magento": return <MangentoIcon style={props.svgStyle} />
+    case "html": return <HtmlIcon style={props.svgStyle} />
+    case "html5": return <HtmlIcon style={props.svgStyle} />
     default: return props.notFound ? (props.placeholder ? <span>{placeholder}</span> : <span>Icon Not Found</span>) : null;
   }
 }
