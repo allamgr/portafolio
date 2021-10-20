@@ -53,6 +53,30 @@ Default.args = {
     {
       name: 'Typescript',
       level: 'I'
+    },
+    {
+      name: 'Docker',
+      level: 'I'
+    },
+    {
+      name: 'Magento',
+      level: 'I'
+    },
+    {
+      name: 'Html',
+      level: 'I'
+    },
+    {
+      name: 'Linux',
+      level: 'I'
+    },
+    {
+      name: 'Kubernetes',
+      level: 'I'
+    },
+    {
+      name: 'Java',
+      level: 'I'
     }
   ]
 }
