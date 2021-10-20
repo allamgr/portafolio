@@ -1,5 +1,11 @@
 # @allamgr/portafolio
 
+## 0.4.0
+
+### Minor Changes
+
+- 5dd0b68: Supporting new tech icons
+
 ## 0.3.2
 
 ### Patch Changes
